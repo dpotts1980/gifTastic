@@ -5,14 +5,16 @@
 // we'll need a function to create a new action button and form method to create the input place
 // we'll need to link to the gif api as well to 
 
-var cities = [Chicago, Detroit, San Francisco, Panama City, Sevilla, Tangier, Barcelona, Paris];
+var cities = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevilla", "Tangier", "Barcelona", "Paris"];
 
     //for loop through the cities and create the buttons//
 
     for(i = 0; i < cities.length; i++) {
-        console.log(cities);
+        console.log(cities[i].length);
+        var cityButtons = $('<btn>' + cities[i] + '</btn');
+
         
-    }
+    };
 
 
 
