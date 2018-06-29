@@ -7,14 +7,18 @@
 
 var cities = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevilla", "Tangier", "Barcelona", "Paris"];
 
+  
+    function displayButtons(){
+        $("#cityButtonsDisplayed").empty();
     //for loop through the cities and create the buttons//
-
     for(i = 0; i < cities.length; i++) {
-        console.log(cities[i].length);
-        var cityButtons = $('<btn>' + cities[i] + '</btn');
+        var cityButtons =  $("<button>");
+        console.log(cityButtons);
+        
 
         
     };
 
 
 
+    }
