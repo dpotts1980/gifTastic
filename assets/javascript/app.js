@@ -38,8 +38,17 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
             url: queryURL,
             type: "GET"
           }).then(function(response){
+                for(j = 0; j < response.data.length; j ++) {
+                    var cityGif = $("<img>")
 
-            var url = response.data[0].images.fixed_height.url
+                    cityGif.attr("src", response.data[j].images.fixed_height.url);
+                    //cityGif.append("#gifsDisplayed");//
+                    $("#gifsDisplayed").append(cityGif);
+
+                }
+            
+            console.log(response.data);
+            
           })
     }
 
