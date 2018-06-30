@@ -43,16 +43,4 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
           })
     }
 
-      /*
-     $("button").on("click", function() {
-      var person = $(this).attr("data-person");
-      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        person + "&api_key=dc6zaTOxFJmzC&limit=10";
-
-      $.ajax({
-        url: queryURL,
-        method: "GET"
-      })
-        .then(function(response) {
-          var results = response.data
-    */
+      
