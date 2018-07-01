@@ -4,6 +4,7 @@
 // .empty will erase anything in the div to prevent duplication
 // we'll need a function to create a new city button and form method to create the input place
 // we'll need to link to the gif api as well to 
+// create new buttons with cities and add to the existing array
 
 var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevilla", "Tangier", "Barcelona", "Paris"];
 
@@ -15,19 +16,34 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
     for(i = 0; i < citiesArray.length; i++) {
         console.log(citiesArray[i].length);
         var cityButtons =  $("<button>" + citiesArray[i] + "</button>");
-        cityButtons.addClass("action");
+        cityButtons.addClass("city");
         cityButtons.addClass("btn btn-info search-giphy");
         var cityButtonsDisplayed = $('#cityButtonsDisplayed');
         cityButtonsDisplayed.append(cityButtons);
         console.log(cityButtonsDisplayed);
         
         };
+        $('#gifToAdd').on("click", function(event) {
+            event.preventDefault()
+           var newCityButton = $('#city-input').val().trim();
+            citiesArray.push(newCityButton);
+            console.log(newCityButton);
+
+           });
     
 
 
     }
     displayButtons();
 
+    //create new button below and pushing into the array//
+
+    
+          
+
+
+
+//this is where we'll do our query selector//
     $(document).on("click", ".search-giphy", searchGiphy);
     
     function searchGiphy(){
@@ -47,7 +63,8 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
 
                 }
             
-            console.log(response.data);
+            //console.log(response.data);
+            
             
           })
     }
