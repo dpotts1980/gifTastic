@@ -23,20 +23,27 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
         console.log(cityButtonsDisplayed);
         
         };
-        $('#gifToAdd').on("click", function(event) {
+        //create new buttons and push to the array
+        function createButtons() {
+     $('#gifToAdd').on("click", function(event) {
             event.preventDefault()
            var newCityButton = $('#city-input').val().trim();
-            citiesArray.push(newCityButton);
+           if(newCityButton === "") {
+               return false;
+           } 
+           citiesArray.push(newCityButton);
             console.log(newCityButton);
 
            });
+        }
+        createButtons();
     
 
 
     }
     displayButtons();
 
-    //create new button below and pushing into the array//
+ 
 
     
           
@@ -62,7 +69,12 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
                     $("#gifsDisplayed").append(cityGif);
 
                 }
-            
+            //create a div to hold the rating data//
+            var gifRating = response.Rated;
+            //creating element to have the rating displayed//
+            var displayRating = $("<p>").text("Rating: " + gifRating);
+            //display the rating//
+            $("#gifsDisplayed").append(displayRating);
             //console.log(response.data);
             
             
