@@ -32,8 +32,12 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
                return false;
            } 
            citiesArray.push(newCityButton);
-            console.log(newCityButton);
-
+           var theNewButton = $("<button>").text(newCityButton);
+            console.log(theNewButton);
+            
+            theNewButton.addClass("btn btn-info search-giphy city");
+            $("#cityButtonsDisplayed").append(theNewButton);
+            
            });
         }
         createButtons();
@@ -43,7 +47,7 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
     }
     displayButtons();
 
- 
+    //create new button below and pushing into the array//
 
     
           
@@ -69,6 +73,7 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
                     $("#gifsDisplayed").append(cityGif);
 
                 }
+                /*
             //create a div to hold the rating data//
             var gifRating = response.Rated;
             //creating element to have the rating displayed//
@@ -76,7 +81,7 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
             //display the rating//
             $("#gifsDisplayed").append(displayRating);
             //console.log(response.data);
-            
+            */
             
           })
     }
