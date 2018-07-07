@@ -73,15 +73,9 @@ var citiesArray = ["Chicago", "Detroit", "San Francisco", "Panama City", "Sevill
                     $("#gifsDisplayed").append(cityGif);
 
                 }
-                /*
-            //create a div to hold the rating data//
-            var gifRating = response.Rated;
-            //creating element to have the rating displayed//
-            var displayRating = $("<p>").text("Rating: " + gifRating);
-            //display the rating//
-            $("#gifsDisplayed").append(displayRating);
-            //console.log(response.data);
-            */
+             /*the last parts I was unable to complete included the rating system for each individual gif,
+              as well as the pause "on click" function on the gifs start and stop*/
+             
             
           })
     }
